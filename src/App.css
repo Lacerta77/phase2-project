@@ -1,9 +1,10 @@
 h1  {
     font-size: 30px;
+    color: white;
 }
 
-Body    {
-    background-image: url(../../phase2-project/src/img/food.jpg);
+body    {
+    background-image: url(https://files.wallpaperpass.com/2019/10/food%20wallpaper%20053%20-%201920x1080.jpg);
     background-size: cover;
 }
 
@@ -12,12 +13,13 @@ Div     {
     padding-top: 5px;
     text-align: center;
     padding-bottom: 30px;
+    color: white;
 }
 
 button  {
     font-size: 15px;
     margin: 10px;
-    outline: black;
+    outline: white;
     border-radius: 10px;
 }
 
@@ -35,7 +37,7 @@ a.nav-link:link
 }
 a.nav-link:visited
 {
-   color: black;
+   color: white;
    text-decoration: none;
 }
 a.nav-link:hover
@@ -45,6 +47,6 @@ a.nav-link:hover
 }
 a.nav-link:active
 {
-   color: black;
+   color: white;
    text-decoration: none;
 }
