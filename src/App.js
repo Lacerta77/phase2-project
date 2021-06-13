@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ShoppingList from './ShoppingList'
+import ShoppingList from './ShoppingList';
+import './App.css';
 
 
 const LocalKey = 'itemApp.items'
@@ -7,8 +8,7 @@ const LocalKey = 'itemApp.items'
 function App() {
   const [items, setItems] = useState([])
   const itemNameRef = useRef()
-
-
+  
 useEffect(() => {
   const storedItems = JSON.parse(localStorage.getItem (LocalKey))
   if (storedItems) setItems(storedItems)
@@ -44,11 +44,14 @@ useEffect(() => {
 
   return (
     <>
-    <ShoppingList items ={items} toggle={toggle} />
+    <h1>The Ultimate Shopping List</h1>
+    <h2>Add and Remove Items and Never Forget A Grocery Item Again.</h2>
     <input ref={itemNameRef} type="text" />
     <button onClick={additem}>Add Item To Shopping List</button>
-    <button onClick={handleClearItems}>Remove Items From Shopping List</button>
-    <div>{items.filter(item => !item.complete).length} Items on Shopping List</div>
+    <button onClick={handleClearItems}>Remove Selected Items From Shopping List</button>
+    <ShoppingList items ={items} toggle={toggle} />
+    <div>{items.filter(item => !item.complete).length} Item(s) on Shopping List</div>
+    <a href="https://www.taste.com.au/quick-easy/galleries/top-100-easy-dinner-recipes/biccuul7?page=2" target="_blank" class="nav-link">Click Here to Find Recipe Ideas!</a>
     </>
   )
 }
