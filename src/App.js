@@ -1,16 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ShoppingList from './ShoppingList';
 import './App.css';
 import AddItemForm from './AddItemForm';
 
-
-const LocalKey = 'itemApp.items'
-
 function App() {
   const [items, setItems] = useState([])
-  
-const BASE_URL = `https://ultimate-shopping-list.herokuapp.com/shoppingcart`
-
 
 useEffect(() => {
 fetch(`https://ultimate-shopping-list.herokuapp.com/shoppingcart`)
